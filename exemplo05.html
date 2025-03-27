@@ -13,14 +13,11 @@
             } while(confirm("Deseja informar outro nome?"));
 
             resp.innerHTML = "Nomes informados: <br />";
-            for(i = 0; i < vetor.length; i++)
-            resp.innerHTML += `${i} ${vetor[i]}<br />`;
+            vetor.forEach(function (nome, i) {resp.innerHTML += `${i} ${nome} <br />`});
         }
     </script>
 </head>
 <body>
-    <input type="number" id="entrada1" placeholder="Informe um número">
-    <input type="number" id="entrada2" placeholder="Informe um número">
     <button onclick="processar()">Ok</button>
     <div id="resp"></div>
 </body>
